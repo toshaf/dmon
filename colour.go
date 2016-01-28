@@ -16,9 +16,9 @@ const (
 
 func printc(w io.Writer, c Colour, s string, args ...interface{}) {
 	fmt.Fprint(w, c)
-	fmt.Fprint(w, "\n ")
+	fmt.Fprint(w, " \n ")
 	fmt.Fprintf(w, s, args...)
-	fmt.Fprint(w, "\n")
+	fmt.Fprint(w, " \n ")
 	fmt.Fprint(w, RESET)
 	fmt.Fprint(w, "\n")
 }
