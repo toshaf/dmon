@@ -42,9 +42,9 @@ func copy(w io.Writer, r io.Reader) {
 
 	for {
 		nr, err := r.Read(buffer)
-        if nr == 0 {
-            return
-        }
+		if nr == 0 {
+			return
+		}
 		nw := 0
 		for nw < nr {
 			i, err := w.Write(buffer[nw:nr])
