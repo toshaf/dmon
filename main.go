@@ -29,6 +29,10 @@ func main() {
 
 		if !next.Equal(last) {
 			Exec(os.Args[2], os.Args[3:])
+			next, err = MapDir(dir)
+			if err != nil {
+				panic(err)
+			}
 		}
 
 		last = next
